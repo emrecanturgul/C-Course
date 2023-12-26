@@ -8,13 +8,10 @@ namespace OOP3_
 {
     internal class BasvuruManager
     {
-        public void BasvuruYap(ICrediManager crediManager,List<ILoggerService> loggers
-            )
+        public void BasvuruYap(ICrediManager crediManager,ILoggerService loggerService )
         {
              crediManager.Hesapla();
-            foreach (var item in loggers) {
-                item.Log(crediManager);
-            }
+           
         }
         public void CrediPreView(List<ICrediManager> loans)
         {

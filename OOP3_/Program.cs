@@ -15,9 +15,9 @@ namespace OOP3_
             HouseCrediManager houseCrediManager = new HouseCrediManager();
             ICrediManager houseCrediManager2 = new HouseCrediManager();
             BasvuruManager basvuruManager = new BasvuruManager();
-            List<ILoggerService> loggers = new List<ILoggerService>
-            {new SmsLoggerService(), new DataBaseLoggerService()  };
-            basvuruManager.BasvuruYap(new SoldierCredi(),loggers);
+            
+            
+            basvuruManager.BasvuruYap(new SoldierCredi(),new SmsLoggerService());
 
             List<ICrediManager> krediler = new List<ICrediManager>() { needCrediManager, carCrediManager };
             //basvuruManager.CrediPreView(krediler);
